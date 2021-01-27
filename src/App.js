@@ -19,14 +19,21 @@ const App = () => {
       }
     ]);
 
-    // console.log(tareas);
-    
-    return (
-      <div className="contenedor">
-      <Header />
+  const [mostrarCompletadas, cambiarMostrarCompletadas] = useState(true);
+
+  return (
+    <div className="contenedor">
+      <Header
+        mostrarCompletadas={mostrarCompletadas}
+        cambiarMostrarCompletadas={cambiarMostrarCompletadas}
+      />
       {/* Para manipular tareas y cambiar en el componente, le pasamos esos valores*/}
       <FormularioTareas tareas={tareas} cambiarTareas={cambiarTareas} />
-      <ListaTareas tareas={tareas} cambiarTareas={cambiarTareas}/>
+      <ListaTareas
+        tareas={tareas}
+        cambiarTareas={cambiarTareas}
+        mostrarCompletadas={mostrarCompletadas}
+      />
     </div>
   );
 }
