@@ -7,16 +7,16 @@ import ListaTareas from './componentes/ListaTareas';
 const App = () => {
   const [tareas, cambiarTareas] = useState(
     [
-      // {
-      //   id: 1,
-      //   texto: 'Lavar la ropa',
-      //   completada: false,
-      // },
-      // {
-      //   id: 2,
-      //   texto: 'Grabar tutorial',
-      //   completada: false,
-      // }
+      {
+        id: 1,
+        texto: 'Lavar la ropa',
+        completada: false,
+      },
+      {
+        id: 2,
+        texto: 'Grabar tutorial',
+        completada: false,
+      }
     ]);
 
     // console.log(tareas);
