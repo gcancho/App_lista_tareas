@@ -2,29 +2,31 @@ import React, { useState } from 'react';
 import './App.css';
 import Header from './componentes/Header';
 import FormularioTareas from './componentes/FormularioTareas';
+import ListaTareas from './componentes/ListaTareas';
 
 const App = () => {
   const [tareas, cambiarTareas] = useState(
     [
-      {
-        id: 1,
-        texto: 'Lavar la ropa',
-        completada: false,
-      },
-      {
-        id: 2,
-        texto: 'Grabar tutorial',
-        completada: false,
-      }
+      // {
+      //   id: 1,
+      //   texto: 'Lavar la ropa',
+      //   completada: false,
+      // },
+      // {
+      //   id: 2,
+      //   texto: 'Grabar tutorial',
+      //   completada: false,
+      // }
     ]);
 
-    console.log(tareas);
+    // console.log(tareas);
     
     return (
       <div className="contenedor">
       <Header />
       {/* Para manipular tareas y cambiar en el componente, le pasamos esos valores*/}
       <FormularioTareas tareas={tareas} cambiarTareas={cambiarTareas} />
+      <ListaTareas tareas={tareas}/>
     </div>
   );
 }
