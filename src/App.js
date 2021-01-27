@@ -15,7 +15,7 @@ const App = () => {
       {
         id: 2,
         texto: 'Grabar tutorial',
-        completada: false,
+        completada: true,
       }
     ]);
 
@@ -26,7 +26,7 @@ const App = () => {
       <Header />
       {/* Para manipular tareas y cambiar en el componente, le pasamos esos valores*/}
       <FormularioTareas tareas={tareas} cambiarTareas={cambiarTareas} />
-      <ListaTareas tareas={tareas}/>
+      <ListaTareas tareas={tareas} cambiarTareas={cambiarTareas}/>
     </div>
   );
 }
